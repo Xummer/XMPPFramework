@@ -16,5 +16,5 @@ Can't find the answer to your question in any of the [wiki](https://github.com/r
 Love the project? Wanna buy me a coffee? (or a beer :D) [![donation](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CV6XGZTPQU9HY)
 
 ## Change Log
-1. 增加Roster section中文支持 [XMPPUserCoreDataStorageObject.m](https://github.com/Xummer/XMPPFramework/blob/master/Extensions/Roster/CoreDataStorage/XMPPUserCoreDataStorageObject.m)([commit d3d140a46b63dd5553b2d0ee01dd3965de00c389](https://github.com/Xummer/XMPPFramework/commit/d3d140a46b63dd5553b2d0ee01dd3965de00c389))
+1. 增加Roster section中文支持 [XMPPUserCoreDataStorageObject.m](https://github.com/Xummer/XMPPFramework/blob/master/Extensions/Roster/CoreDataStorage/XMPPUserCoreDataStorageObject.m)([line 148](https://github.com/Xummer/XMPPFramework/commit/d3d140a46b63dd5553b2d0ee01dd3965de00c389))
 
