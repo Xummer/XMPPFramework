@@ -145,10 +145,9 @@ static const int xmppLogLevel = XMPP_LOG_LEVEL_WARN;
   if (tmp == nil) {
     // Section names are organized by capitalizing the first letter of the displayName
     
-    NSString *upperCase = [self.displayName uppercaseString];
-    
-    // return the first character with support UTF-16:
-    tmp = [upperCase substringWithRange:[upperCase rangeOfComposedCharacterSequenceAtIndex:0]];
+    UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
+    NSInteger sectionNumber = [collation sectionForObject:self collationStringSelector:@selector(displayName)];
+    tmp = collation.sectionTitles[ sectionNumber ];
 
     [self setPrimitiveSectionName:tmp];
   }
