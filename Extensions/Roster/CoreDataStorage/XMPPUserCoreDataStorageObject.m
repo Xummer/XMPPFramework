@@ -146,8 +146,8 @@ static const int xmppLogLevel = XMPP_LOG_LEVEL_WARN;
     // Section names are organized by capitalizing the first letter of the displayName
     
     UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
-    NSInteger sectionNumber = [collation sectionForObject:self collationStringSelector:@selector(displayName)];
-    tmp = collation.sectionTitles[ sectionNumber ];
+    self.section = [collation sectionForObject:self collationStringSelector:@selector(displayName)];
+    tmp = collation.sectionTitles[ self.section ];
 
     [self setPrimitiveSectionName:tmp];
   }
@@ -161,7 +161,9 @@ static const int xmppLogLevel = XMPP_LOG_LEVEL_WARN;
   [self didChangeValueForKey:@"displayName"];
   
   // If the displayName changes, the sectionName becomes invalid.
-  [self setPrimitiveSectionName:nil];
+  UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
+  self.section = [collation sectionForObject:self collationStringSelector:@selector(displayName)];
+  [self setPrimitiveSectionName:collation.sectionTitles[ self.section ]];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
